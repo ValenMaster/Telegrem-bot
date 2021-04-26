@@ -9,7 +9,7 @@ from telegram.ext import ConversationHandler, CommandHandler, MessageHandler, Fi
 
 from Log_Talega import TOKEN
 from Others import my_friends
-from bots_functions import bots_functions, bots_future_functions
+from Project.bots_functions import bots_functions, bots_future_functions
 from dic_quest import around_world_easy, around_world_middle, inventions_easy, inventions_middle, \
     games_and_entertainment_easy, games_and_entertainment_middle, art_easy, art_middle
 
@@ -48,7 +48,7 @@ def help(update,
 
 
 def plans_for_the_future(update,
-                         context):  # __________________________________________________________________________Планы на будущее
+                         context):  # __________________________________________________________________________________Планы на будущее
     update.message.reply_text('❗️❗️❗️')
     update.message.reply_text(bots_future_functions)
 
@@ -183,7 +183,7 @@ def task(context):
 
 
 def unset_timer(update,
-                context):  # ___________________________________________________________________________________Сброс таймера
+                context):  # ___________________________________________________________________________________________Сброс таймера
     chat_id = update.message.chat_id
     job_removed = remove_job_if_exists(str(chat_id), context)
     text = 'Хорошо, вернулся сейчас!' if job_removed else 'Нет активного таймера.'
@@ -276,7 +276,7 @@ def second_stage_of_creating(update, context):
 
 
 def map(update,
-        context):  # ___________________________________________________________________________________________Вывод карты и координат
+        context):  # ___________________________________________________________________________________________________Вывод координат
     update.message.reply_text('🔎')
     map_rec = update.message.text
     try:
@@ -393,7 +393,7 @@ def second_customization_quest(update, context):
 
 
 def thrid_customization_quest(update,
-                              context):  # _____________________________________________________________________Конец настроек и Начало викторины
+                              context):  # _____________________________________________________________________________Конец настроек и Начало викторины
     level = update.message.text
     if level == '1':
         sp_ans.append('Легко')
