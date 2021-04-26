@@ -9,7 +9,7 @@ from telegram.ext import ConversationHandler, CommandHandler, MessageHandler, Fi
 
 from Log_Talega import TOKEN
 from Others import my_friends
-from Project.bots_functions import bots_functions, bots_future_functions
+from bots_functions import bots_functions, bots_future_functions
 from dic_quest import around_world_easy, around_world_middle, inventions_easy, inventions_middle, \
     games_and_entertainment_easy, games_and_entertainment_middle, art_easy, art_middle
 
